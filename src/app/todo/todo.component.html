@@ -1,0 +1,12 @@
+<div class="d-flex flex-column justify-content-center align-items-center">
+    <div *ngFor="let option of todos">
+        <div class="form-check form-check my-3 display-6 ">
+            <input class="form-check-input" type="checkbox" id={{option.id}} value="option1" [(ngModel)]="option.checked">
+            <label class="form-check-label" for={{option.id}}>{{option.name}}</label>
+        </div>
+    </div>   
+</div>
+<h2 align="center" style="margin-top: 2rem;" >Task Scheduled : </h2>
+<ul class="d-flex">    
+    <p *ngFor="let option of selectedOptions" class="px-4 h3">{{option.name}}</p>
+</ul>
